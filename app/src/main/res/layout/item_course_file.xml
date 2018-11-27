@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_icon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_course_video"/>
+
+        <LinearLayout
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/iv_icon"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="热身"
+                android:textColor="@color/text_color_3"
+                android:textSize="@dimen/text_size_3" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2018-11-11"
+                    android:alpha="0.6"
+                    android:textColor="@color/text_color_4"
+                    android:textSize="@dimen/text_size_12" />
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:id="@+id/tv_course_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.6"
+                    android:text="111个动作"
+                    android:textColor="@color/text_color_4"
+                    android:textSize="@dimen/text_size_12" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:padding="4dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/iv_more"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_img_sport_more"/>
+        <View
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@+id/iv_icon"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/divider_color_e1" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/tab_menu_view">
+
+        </FrameLayout>
+
+
+        <View
+            android:id="@+id/div_tab_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_above="@+id/tab_menu_view"
+            android:background="#454545" />
+
+        <LinearLayout
+            android:id="@+id/tab_menu_view"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_white"
+            android:orientation="horizontal"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp">
+
+
+            <RelativeLayout
+                android:id="@+id/view_tab1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tab_menu1"
+                    style="@style/tab_menu_text"
+                    android:drawablePadding="3dp"
+                    android:drawableTop="@drawable/selector_tab_menu_subject"
+                    android:duplicateParentState="true"
+                    android:gravity="center"
+                    android:text="上课" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/view_tab2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tab_menu2"
+                    style="@style/tab_menu_text"
+                    android:drawablePadding="3dp"
+                    android:drawableTop="@drawable/selector_tab_menu_my_student"
+                    android:duplicateParentState="true"
+                    android:gravity="center"
+                    android:text="学员" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/view_tab3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tab_menu3"
+                    style="@style/tab_menu_text"
+                    android:drawablePadding="3dp"
+                    android:drawableTop="@drawable/selector_tab_menu_model"
+                    android:duplicateParentState="true"
+                    android:gravity="center"
+                    android:text="课程" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/view_tab4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tab_menu4"
+                    style="@style/tab_menu_text"
+                    android:drawablePadding="3dp"
+                    android:drawableTop="@drawable/selector_tab_menu_me"
+                    android:duplicateParentState="true"
+                    android:gravity="center"
+                    android:text="我" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</merge>
