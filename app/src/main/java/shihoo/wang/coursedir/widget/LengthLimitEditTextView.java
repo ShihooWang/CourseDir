@@ -52,6 +52,37 @@ public class LengthLimitEditTextView extends android.support.v7.widget.AppCompat
         }
     }
 
+
+    /**
+     * 复写系统的setText方法，防止设置一个过长的字符串，并设置光标到末尾
+     *
+     * @param text
+     * @param type
+     */
+    @Override
+    public void setText(CharSequence text, BufferType type) {
+        CharSequence dealText = text;
+        int dindex = 0;
+        int count = 0;
+        while (count <= mLimitLength && dindex < text.length()) {
+            char c = text.charAt(dindex++);
+            if (c < 123 && c > 96) {
+                // 97 - 123 26个小写字母
+                count = count + 1;
+            } else if (c < 58 && c > 47){
+                // 48 - 57 10个数字
+                count = count + 1;
+            }else {
+                count = count + 2;
+            }
+        }
+        if (count > mLimitLength) {
+            dealText = text.subSequence(0, dindex - 1);
+        }
+        super.setText(dealText, type);
+        setSelection(dealText.length());
+    }
+
     @Override
     protected void onTextChanged(CharSequence text, int start, int lengthBefore, int lengthAfter) {
         super.onTextChanged(text, start, lengthBefore, lengthAfter);
